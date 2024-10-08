@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/jetstack/cert-manager
+    repoURL: https://github.com/cert-manager/cert-manager
     targetRevision: v1.16.0
-    path: deploy/charts/cert-manager
+    chart: cert-manager
     helm:
       values: |
         installCRDs: true
