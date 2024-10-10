@@ -20,7 +20,7 @@ spec:
         - containerPort: 80
         env:
         - name: WORDPRESS_DATABASE_HOST
-          value: my-mariadb-mariadb.default.svc.cluster.local:3306
+          value: my-mariadb.default.svc.cluster.local:3306
         - name: WORDPRESS_DATABASE_USER
           valueFrom:
             secretKeyRef:
