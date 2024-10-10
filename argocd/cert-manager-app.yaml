@@ -6,12 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/cert-manager/cert-manager
-    targetRevision: v1.16.0
-    chart: cert-manager
-    helm:
-      values: |
-        installCRDs: true
+    repoURL: https://github.com/ahmedhammamm/argo-wp-k3d
+    targetRevision: HEAD
+    path: cert-manager
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
