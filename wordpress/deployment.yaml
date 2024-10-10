@@ -15,23 +15,23 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: bitnami/wordpress:latest
+        image: wordpress:latest
         ports:
         - containerPort: 80
         env:
-        - name: WORDPRESS_DATABASE_HOST
+        - name: WORDPRESS_DB_HOST
           value: my-mariadb.default.svc.cluster.local
-        - name: WORDPRESS_DATABASE_USER
+        - name: WORDPRESS_DB_USER
           valueFrom:
             secretKeyRef:
               name: wordpress-db-secret
               key: WORDPRESS_DATABASE_USER
-        - name: WORDPRESS_DATABASE_PASSWORD
+        - name: WORDPRESS_DB_PASSWORD
           valueFrom:
             secretKeyRef:
               name: wordpress-db-secret
               key: WORDPRESS_DATABASE_PASSWORD
-        - name: WORDPRESS_DATABASE_NAME
+        - name: WORDPRESS_DB_NAME
           valueFrom:
             secretKeyRef:
               name: wordpress-db-secret
